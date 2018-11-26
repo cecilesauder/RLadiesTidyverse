@@ -1,0 +1,30 @@
+---
+title: "R-Ladies and Tidyverse"
+subtitle: "⚔<br/>with xaringan"
+author: "Cécile Sauder and Criscely Luján "
+date: "2018/12/12"
+output:
+  xaringan::moon_reader:
+    css: ["default", "rladies", "rladies-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+#C'est parti ! 
+
+![](https://media.giphy.com/media/r9WS57qOqU1KU/giphy.gif)
+
+
+---
+
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan) with the [**R-Ladies theme**](https://github.com/rladies/resources/blob/master/xaringan-slides/how_to_use.md) 
+
