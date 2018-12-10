@@ -58,9 +58,61 @@ library(tidyverse)
 
 ---
 
-# Import data ![](img/readr_hex.png){width=50px}
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/readr.svg?sanitize=true)
+background-size: 100px
+background-position: 90% 3%
+
+# Import data 
+
 
 ![](img/readr.png)
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/readr.svg?sanitize=true)
+background-size: 100px
+background-position: 90% 3%
+
+# Import data 
+
+![](img/TMDB 5000 Movie Dataset _ Kaggle.png)
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/readr.svg?sanitize=true)
+background-size: 100px
+background-position: 90% 3%
+
+# Import data 
+
+
+```r
+data_movies &lt;- read_csv("data/tmdb_5000_movies.csv")
+data_credits &lt;- read_csv("data/tmdb_5000_credits.csv")
+
+data_movies
+```
+
+```
+## # A tibble: 4,803 x 20
+##    budget genres homepage     id keywords original_langua~ original_title
+##     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;         
+##  1 2.37e8 "[{\"~ http://~  19995 "[{\"id~ en               Avatar        
+##  2 3.00e8 "[{\"~ http://~    285 "[{\"id~ en               Pirates of th~
+##  3 2.45e8 "[{\"~ http://~ 206647 "[{\"id~ en               Spectre       
+##  4 2.50e8 "[{\"~ http://~  49026 "[{\"id~ en               The Dark Knig~
+##  5 2.60e8 "[{\"~ http://~  49529 "[{\"id~ en               John Carter   
+##  6 2.58e8 "[{\"~ http://~    559 "[{\"id~ en               Spider-Man 3  
+##  7 2.60e8 "[{\"~ http://~  38757 "[{\"id~ en               Tangled       
+##  8 2.80e8 "[{\"~ http://~  99861 "[{\"id~ en               Avengers: Age~
+##  9 2.50e8 "[{\"~ http://~    767 "[{\"id~ en               Harry Potter ~
+## 10 2.50e8 "[{\"~ http://~ 209112 "[{\"id~ en               Batman v Supe~
+## # ... with 4,793 more rows, and 13 more variables: overview &lt;chr&gt;,
+## #   popularity &lt;dbl&gt;, production_companies &lt;chr&gt;,
+## #   production_countries &lt;chr&gt;, release_date &lt;date&gt;, revenue &lt;dbl&gt;,
+## #   runtime &lt;int&gt;, spoken_languages &lt;chr&gt;, status &lt;chr&gt;, tagline &lt;chr&gt;,
+## #   title &lt;chr&gt;, vote_average &lt;dbl&gt;, vote_count &lt;int&gt;
+```
+
 
 
 

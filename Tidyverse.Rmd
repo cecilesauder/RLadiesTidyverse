@@ -15,6 +15,7 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+
 ```
 # www.tidyverse.org
 
@@ -37,9 +38,39 @@ library(tidyverse)
 
 ---
 
-# Import data ![](img/readr_hex.png){width=50px}
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/readr.svg?sanitize=true)
+background-size: 100px
+background-position: 90% 3%
+
+# Import data 
+
 
 ![](img/readr.png)
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/readr.svg?sanitize=true)
+background-size: 100px
+background-position: 90% 3%
+
+# Import data 
+
+![](img/TMDB 5000 Movie Dataset _ Kaggle.png)
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/readr.svg?sanitize=true)
+background-size: 100px
+background-position: 90% 3%
+
+# Import data 
+
+```{r, message=FALSE, warning=FALSE}
+data_movies <- read_csv("data/tmdb_5000_movies.csv")
+data_credits <- read_csv("data/tmdb_5000_credits.csv")
+
+data_movies
+```
+
 
 
 
