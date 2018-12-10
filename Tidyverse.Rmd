@@ -16,9 +16,31 @@ output:
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
-#C'est parti ! 
+# www.tidyverse.org
 
-![](https://media.giphy.com/media/r9WS57qOqU1KU/giphy.gif)
+.pull-left[
+![](img/Tidyverse2.png)
+]
+
+.pull-right[
+
+
+```{r}
+
+#install.packages("tidyverse")
+
+library(tidyverse)
+
+```
+]
+
+
+---
+
+# Import data ![](img/readr_hex.png){width=50px}
+
+![](img/readr.png)
+
 
 
 ---
