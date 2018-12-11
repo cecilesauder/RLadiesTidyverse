@@ -32,3 +32,7 @@ div.my-footer span {
   color: #D3D3D3; 
   opacity: 1; /* default: 0.5 */
 }
+
+.pull-center {
+  float: center;
+}

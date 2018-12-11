@@ -6,7 +6,6 @@ data_credits <- read_csv("data/tmdb_5000_credits.csv")
 ##purrr
 both <- list("data_movies" = data_movies, "data_credits" = data_credits)
 
-
 both %>%
   map(names)
 
@@ -68,8 +67,8 @@ data_movies2 %>%
 data_movies2 %>%
   ggplot(aes(x=budget, y= vote_average, col = Production, label = original_title)) +
   geom_smooth() +
-  geom_text(check_overlap = TRUE) +
-  facet_wrap(~Production) 
+  facet_wrap(~Production) +
+  geom_text(check_overlap = TRUE)
  
 
 ##money gather spread

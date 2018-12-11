@@ -1,0 +1,53 @@
+---
+title: "QUIZ "
+subtitle: ""
+author: ""
+date: "2018/12/12"
+output:
+  xaringan::moon_reader:
+    css: ["default", "rladies", "rladies-fonts", "my_theme.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+#options(crayon.enabled = TRUE)
+
+```
+
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"><span>QUIZ    
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+12/12/2018</span></div> 
+---
+background-image: url(https://disney-planet.fr/wp-content/uploads/2015/09/professeur-ratigan-personnage-basil-detective-prive-09.jpg)
+background-size: 700px
+background-position: 50% 80%
+class: center
+
+##De quel film vient cette image ? 
+##What film is this image from? 
+
+---
+class: center, middle
+
+##De quel package vient la fonction **map()** ? 
+##What package is the **map()** function from? 
+
+
+
+---
+class: center, middle
+
+##De quelle couleur est le sticker du package **readr** ?
+##What color is the sticker of the **readr** package?
+
