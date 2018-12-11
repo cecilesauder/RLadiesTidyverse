@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>R-Ladies and Tidyverse</title>
+    <title>Tidyverse</title>
     <meta charset="utf-8">
-    <meta name="author" content="Cécile Sauder and Criscely Luján" />
+    <meta name="author" content="Cécile Sauder" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/rladies.css" rel="stylesheet" />
     <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my_theme.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
-class: center, middle, inverse, title-slide
 
-# R-Ladies and Tidyverse
-## ⚔<br/>with xaringan
-### Cécile Sauder and Criscely Luján
-### 2018/12/12
+
+
+
+
+layout: true
+  
+&lt;div class="my-header"&gt;&lt;/div&gt;
+
+&lt;div class="my-footer"&gt;&lt;span&gt;Cécile SAUDER    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+12/12/2018&lt;/span&gt;&lt;/div&gt; 
+---
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/tidyverse.svg?sanitize=true)
+background-size: 500px
+background-position: 50% 50%
+
 
 ---
+background-image: url(img/tidy_data1.png)
+background-size: 800px
+background-position: 50% 50%
 
+# Tidy data
 
+---
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/tidyverse.svg?sanitize=true)
+background-size: 100px
+background-position: 90% 3%
 
-# www.tidyverse.org
+# [www.tidyverse.org](www.tidyverse.org)
 
-.pull-left[
-![](img/Tidyverse2.png)
-]
-
-.pull-right[
 
 
 
@@ -53,7 +69,11 @@ library(tidyverse)
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 ```
-]
+  
+  
+&lt;br /&gt; 
+  
+&lt;img src="img/tidyband.png" width="1147" /&gt;
 
 
 ---
@@ -75,6 +95,7 @@ background-position: 90% 3%
 # Import data 
 
 ![](img/TMDB 5000 Movie Dataset _ Kaggle.png)
+
 
 ---
 
@@ -112,8 +133,135 @@ data_movies
 ## #   runtime &lt;int&gt;, spoken_languages &lt;chr&gt;, status &lt;chr&gt;, tagline &lt;chr&gt;,
 ## #   title &lt;chr&gt;, vote_average &lt;dbl&gt;, vote_count &lt;int&gt;
 ```
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/pipe.svg?sanitize=true)
+background-size: 100px
+background-position: 90% 3%
+
+# Pipe data
+
+- old way : **verb(subject, complements)**
+
+```r
+head(data_movies,3)
+```
 
 
+- pipe way : **subject %&gt;% verb(complements)**
+
+```r
+data_movies %&gt;% head(3)
+```
+
+```
+## # A tibble: 3 x 20
+##   budget genres homepage     id keywords original_langua~ original_title
+##    &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;         
+## 1 2.37e8 "[{\"~ http://~  19995 "[{\"id~ en               Avatar        
+## 2 3.00e8 "[{\"~ http://~    285 "[{\"id~ en               Pirates of th~
+## 3 2.45e8 "[{\"~ http://~ 206647 "[{\"id~ en               Spectre       
+## # ... with 13 more variables: overview &lt;chr&gt;, popularity &lt;dbl&gt;,
+## #   production_companies &lt;chr&gt;, production_countries &lt;chr&gt;,
+## #   release_date &lt;date&gt;, revenue &lt;dbl&gt;, runtime &lt;int&gt;,
+## #   spoken_languages &lt;chr&gt;, status &lt;chr&gt;, tagline &lt;chr&gt;, title &lt;chr&gt;,
+## #   vote_average &lt;dbl&gt;, vote_count &lt;int&gt;
+```
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/purrr.svg?sanitize=true)
+background-size: 100px
+background-position: 90% 3%
+
+# Functional programming
+
+
+```r
+both &lt;- list("data_movies" = data_movies, "data_credits" = data_credits)
+
+both %&gt;%
+  map(names)
+```
+
+```
+## $data_movies
+##  [1] "budget"               "genres"               "homepage"            
+##  [4] "id"                   "keywords"             "original_language"   
+##  [7] "original_title"       "overview"             "popularity"          
+## [10] "production_companies" "production_countries" "release_date"        
+## [13] "revenue"              "runtime"              "spoken_languages"    
+## [16] "status"               "tagline"              "title"               
+## [19] "vote_average"         "vote_count"          
+## 
+## $data_credits
+## [1] "movie_id" "title"    "cast"     "crew"
+```
+
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/stringr.svg?sanitize=true)
+background-size: 100px
+background-position: 90% 3%
+
+# String manipulation
+
+
+```r
+data_movies &lt;- data_movies %&gt;%
+  mutate(Production = case_when(
+    str_detect(production_companies,"Disney") ~ "Disney",
+    str_detect(production_companies,"Marvel") ~ "Marvel",
+    str_detect(production_companies,"DC") ~ "DC",
+    TRUE ~ "Other"
+  ))
+```
+
+--
+
+
+```r
+data_movies2 &lt;- data_movies %&gt;%
+  filter(Production != "Other")
+```
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/ggplot2.svg?sanitize=true)
+background-size: 100px
+background-position: 90% 3%
+
+# Visualize data 
+
+
+```r
+data_movies2 %&gt;%
+  ggplot(aes(x=budget, y= vote_average, col = Production, label = original_title)) +
+  geom_smooth() +
+  facet_wrap(~Production) 
+```
+
+![](Tidyverse_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/ggplot2.svg?sanitize=true)
+background-size: 100px
+background-position: 90% 3%
+
+# Visualize data 
+
+
+```r
+data_movies2 %&gt;%
+  ggplot(aes(x=budget, y= vote_average, col = Production, label = original_title)) +
+  geom_smooth() +
+  facet_wrap(~Production) +
+  geom_text(check_overlap = TRUE)
+```
+
+![](Tidyverse_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
 
 
 ---
