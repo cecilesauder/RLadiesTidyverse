@@ -31,7 +31,7 @@ layout: true
 12/12/2018</span></div> 
 ---
 background-image: url(https://github.com/rstudio/hex-stickers/raw/master/SVG/tidyverse.svg?sanitize=true)
-background-size: 500px
+background-size: 550px
 background-position: 50% 50%
 
 
@@ -173,7 +173,7 @@ background-position: 90% 3%
 
 # Visualize data 
 
-```{r, message=FALSE, fig.width = 12, fig.height=5}
+```{r, message=FALSE, fig.width = 13, fig.height=6}
 
 data_movies2 %>%
   ggplot(aes(x=budget, y= vote_average, col = Production, label = original_title)) +
@@ -189,7 +189,7 @@ background-position: 90% 3%
 
 # Visualize data 
 
-```{r, message=FALSE,fig.width = 12, fig.height=5}
+```{r, message=FALSE,fig.width = 13, fig.height=6}
 data_movies2 %>%
   ggplot(aes(x=budget, y= vote_average, col = Production, label = original_title)) +
   geom_smooth() +
