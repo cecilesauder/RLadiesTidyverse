@@ -69,12 +69,25 @@ data_movies2 %>%
   geom_smooth() +
   facet_wrap(~Production) +
   geom_text(check_overlap = TRUE)
- 
 
-##money gather spread
+## 
 
 data_movies %>%
   group_by(Production) %>%
   top_n(5, revenue) %>%
   select(original_title, budget, revenue, vote_average)
+
+
+
+## gather spread
+
+spread_data <- data_movies2 %>%
+  spread(key = Production, value = vote_average)
+
+spread_data %>%
+  gather(key = "Prod", value = "vote", -title, -budget) %>%
+  filter(!is.na(vote))
+
+
+
 

@@ -33,6 +33,9 @@ div.my-footer span {
   opacity: 1; /* default: 0.5 */
 }
 
-.pull-center {
-  float: center;
+.remark-inline-code{
+  /* background: #F5F5F5; /* lighter */
+  background: #e7e8e2; /* darker */
+  border-radius: 3px;
+  padding: 4px;
 }
