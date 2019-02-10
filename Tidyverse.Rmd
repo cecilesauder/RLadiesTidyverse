@@ -79,7 +79,7 @@ knitr::include_graphics("img/tidyband.png")
 
 ---
 
-background-image: url('img/tidyverse.png')
+background-image: url('img/Tidyverse.png')
 background-size: 900px
 background-position: 65% 45%
 

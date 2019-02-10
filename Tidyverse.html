@@ -62,20 +62,20 @@ library(tidyverse)
 ```
 
 ```
-## -- Attaching packages ------------------------------------------------------- tidyverse 1.2.1 --
+## ── Attaching packages ─────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──
 ```
 
 ```
-## v ggplot2 3.1.0     v purrr   0.2.5
-## v tibble  1.4.2     v dplyr   0.7.8
-## v tidyr   0.8.2     v stringr 1.3.1
-## v readr   1.1.1     v forcats 0.3.0
+## ✔ ggplot2 3.0.0.9000     ✔ purrr   0.2.5     
+## ✔ tibble  1.4.2          ✔ dplyr   0.7.6     
+## ✔ tidyr   0.8.1          ✔ stringr 1.3.1     
+## ✔ readr   1.1.1          ✔ forcats 0.3.0
 ```
 
 ```
-## -- Conflicts ---------------------------------------------------------- tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
+## ── Conflicts ────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
 ```
   
   
@@ -86,7 +86,7 @@ library(tidyverse)
 
 ---
 
-background-image: url('img/tidyverse.png')
+background-image: url('img/Tidyverse.png')
 background-size: 900px
 background-position: 65% 45%
 
@@ -132,18 +132,18 @@ data_movies
 
 ```
 *## # A tibble: 4,803 x 20
-##    budget genres homepage     id keywords original_langua~ original_title
-##     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;         
-##  1 2.37e8 "[{\"~ http://~  19995 "[{\"id~ en               Avatar        
-##  2 3.00e8 "[{\"~ http://~    285 "[{\"id~ en               Pirates of th~
-##  3 2.45e8 "[{\"~ http://~ 206647 "[{\"id~ en               Spectre       
-##  4 2.50e8 "[{\"~ http://~  49026 "[{\"id~ en               The Dark Knig~
-##  5 2.60e8 "[{\"~ http://~  49529 "[{\"id~ en               John Carter   
-##  6 2.58e8 "[{\"~ http://~    559 "[{\"id~ en               Spider-Man 3  
-##  7 2.60e8 "[{\"~ http://~  38757 "[{\"id~ en               Tangled       
-##  8 2.80e8 "[{\"~ http://~  99861 "[{\"id~ en               Avengers: Age~
-##  9 2.50e8 "[{\"~ http://~    767 "[{\"id~ en               Harry Potter ~
-## 10 2.50e8 "[{\"~ http://~ 209112 "[{\"id~ en               Batman v Supe~
+##     budget genres homepage     id keywords original_langua… original_title
+##      &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;         
+##  1  2.37e8 "[{\"… http://…  19995 "[{\"id… en               Avatar        
+##  2  3.00e8 "[{\"… http://…    285 "[{\"id… en               Pirates of th…
+##  3  2.45e8 "[{\"… http://… 206647 "[{\"id… en               Spectre       
+##  4  2.50e8 "[{\"… http://…  49026 "[{\"id… en               The Dark Knig…
+##  5  2.60e8 "[{\"… http://…  49529 "[{\"id… en               John Carter   
+##  6  2.58e8 "[{\"… http://…    559 "[{\"id… en               Spider-Man 3  
+##  7  2.60e8 "[{\"… http://…  38757 "[{\"id… en               Tangled       
+##  8  2.80e8 "[{\"… http://…  99861 "[{\"id… en               Avengers: Age…
+##  9  2.50e8 "[{\"… http://…    767 "[{\"id… en               Harry Potter …
+## 10  2.50e8 "[{\"… http://… 209112 "[{\"id… en               Batman v Supe…
 ## # ... with 4,793 more rows, and 13 more variables: overview &lt;chr&gt;,
 ## #   popularity &lt;dbl&gt;, production_companies &lt;chr&gt;,
 ## #   production_countries &lt;chr&gt;, release_date &lt;date&gt;, revenue &lt;dbl&gt;,
@@ -185,11 +185,11 @@ data_movies %&gt;% head(3)
 
 ```
 ## # A tibble: 3 x 20
-##   budget genres homepage     id keywords original_langua~ original_title
-##    &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;         
-## 1 2.37e8 "[{\"~ http://~  19995 "[{\"id~ en               Avatar        
-## 2 3.00e8 "[{\"~ http://~    285 "[{\"id~ en               Pirates of th~
-## 3 2.45e8 "[{\"~ http://~ 206647 "[{\"id~ en               Spectre       
+##    budget genres homepage     id keywords  original_langua… original_title
+##     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;            &lt;chr&gt;         
+## 1  2.37e8 "[{\"… http://…  19995 "[{\"id\… en               Avatar        
+## 2  3.00e8 "[{\"… http://…    285 "[{\"id\… en               Pirates of th…
+## 3  2.45e8 "[{\"… http://… 206647 "[{\"id\… en               Spectre       
 ## # ... with 13 more variables: overview &lt;chr&gt;, popularity &lt;dbl&gt;,
 ## #   production_companies &lt;chr&gt;, production_countries &lt;chr&gt;,
 ## #   release_date &lt;date&gt;, revenue &lt;dbl&gt;, runtime &lt;int&gt;,
