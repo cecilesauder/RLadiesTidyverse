@@ -16,7 +16,7 @@ output:
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
-#C'est parti ! 
+#C'est parti ! yeah !
 
 ![](https://media.giphy.com/media/r9WS57qOqU1KU/giphy.gif)
 
